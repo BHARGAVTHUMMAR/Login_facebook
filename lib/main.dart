@@ -40,6 +40,8 @@ class _HomeState extends State<Home> {
       return Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ListTile(
               leading: CircleAvatar(
@@ -49,17 +51,13 @@ class _HomeState extends State<Home> {
               title: Text(user.name!),
               subtitle: Text(user.email!),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            Spacer(),
             const Text(
               'Signed in successfully',
               style: TextStyle(fontSize: 20),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(onPressed: signOut, child: const Text('Sign out'))
+            ElevatedButton(onPressed: signOut, child: const Text('Sign out')),
+            Spacer(),
           ],
         ),
       );
